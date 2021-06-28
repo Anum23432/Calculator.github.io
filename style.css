@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+  html, body{
+    height: 100%;
+  }
+  #main{
+      
+    display: block;
+    border:1px transparent #e4e1e1;
+    box-shadow: 0 0 10px 0 white;
+    width: 500px;
+    margin-left: 430px;
+    height: 300px;
+    background-color: rgba(3, 3, 3, 0.486);
+    font-style: italic;
+    margin-top: 120px;
+        
+    
+  }
+  h1{
+      color: white;
+      text-shadow: 3px 3px crimson;
+      margin-left: 160px;
+  }
+  input{
+      padding:8px;
+      border:none;
+      border-bottom: 2px solid crimson;
+      margin-left: 35px;
+      border-radius: 10px;
+   
+  }
+  button{
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 3px;
+    padding: 15px;
+    align-items: center;
+
+    /* // Using inset box-shadow instead of border for sizing simplicity */
+    box-shadow: inset 0 0 0 2px rgb(252, 252, 252);
+    color: white;
+    /* font-size: inherit; */
+    font-size: 15px;
+    box-shadow: 0 0 10px 0 white;
+    margin-left: 63px;
+
+    /* // Required, since we're setting absolute on pseudo-elements */
+    position: relative;
+    vertical-align: middle;
+  }
+  
+    button::before,
+    button::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  
+    button {
+        transition: color 0.25s;
+    }
+      button::before,
+      button::after {
+        /* // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts */
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    
+      /* // This covers the top & right borders (expands right, then down) */
+      button::before {
+        top: 0;
+        left: 0;
+      }
+    
+      /* // And this the bottom & left borders (expands left, then up) */
+      button::after {
+        bottom: 0;
+        right: 0;
+      }
+      
+      button:hover {
+        color: white;
+      }
+    
+      /* // Hover styles */
+      button:hover::before,
+      button:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+    
+      button:hover::before {
+        border-top-color:crimson; /*Make borders visible*/
+        border-right-color:crimson;
+        transition:
+          width 0.25s ease-out, /* Width expands first*/
+          height 0.25s ease-out 0.25s; /* And then height*/
+      }
+    
+      button:hover::after {
+        border-bottom-color:crimson; /* Make borders visible*/
+        border-left-color:crimson;
+        transition:
+          border-color 0s ease-out 0.5s,
+          width 0.25s ease-out 0.5s, 
+          height 0.25s ease-out 0.75s;
+      }
+      
+  body{
+    
+    width: 100%;
+    height: 100%;
+  
+    position: relative;
+    font-family: sans-serif;
+  
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  
+  p{
+      color: white;
+      text-shadow: 3px 3px crimson;
+      font-size: 25px;
+      margin-left: 20px;
+  }
+  span{
+    margin-left: 10px;
+  }
+  
