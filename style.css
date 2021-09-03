@@ -149,4 +149,37 @@
   span{
     margin-left: 10px;
   }
-  
+  @media only screen and (max-width: 600px) {
+    #main{
+      
+      display: block;
+      border:1px transparent #e4e1e1;
+      box-shadow: 0 0 10px 0 white;
+      width: 330px;
+      margin-left: 20px;
+      height: 400px;
+      background-color: rgba(3, 3, 3, 0.486);
+      font-style: italic;
+      margin-top: 120px;
+          
+      
+    }
+    h1{
+        color: white;
+        text-shadow: 3px 3px crimson;
+        margin-left: 80px;
+    }
+    input{
+        padding:8px;
+        border:none;
+        border-bottom: 2px solid crimson;
+        margin-left: 70px;
+        border-radius: 10px;
+        /* margin: 2px; */
+     
+    }
+    button{
+      display: inline-block;
+      margin:21px;
+    }
+  }
